@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barquinho</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        .cena {
+            width: 700px;
+            height: 400px;
+            margin: 50px auto;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(
+                to bottom,
+                #e7f8ff,
+                #a9dff0 75%
+            );
+        }
+
+        /* NUVEM */
+        .nuvem {
+            width: 100px;
+            height: 35px;
+            background-color: white;
+            border-radius: 50px;
+            position: absolute;
+            top: 80px;
+            left: -120px;
+            box-shadow:
+                25px -15px 0 5px white,
+                55px 0 0 5px white;
+            animation: moverNuvem 18s linear infinite;
+        }
+
+        @keyframes moverNuvem {
+            from {
+                left: -150px;
+            }
+
+            to {
+                left: 750px;
+            }
+        }
+
+        /* BARQUINHO */
+        .barquinho {
+            width: 90px;
+            height: 65px;
+            position: absolute;
+            left: 0;
+            top: 215px;
+            z-index: 2;
+            font-size: 65px;
+            text-align: center;
+            line-height: 65px;
+            background-image: linear-gradient(
+                transparent,
+                transparent
+            );
+            animation:
+                navegar 12s linear infinite,
+                balancar 2s ease-in-out infinite;
+        }
+
+        @keyframes navegar {
+            from {
+                left: -100px;
+            }
+
+            to {
+                left: 710px;
+            }
+        }
+
+        @keyframes balancar {
+            0%, 100% {
+                transform: rotate(-5deg);
+            }
+
+            50% {
+                transform: rotate(5deg);
+            }
+        }
+
+        /* MAR */
+        .mar {
+            width: 100%;
+            height: 130px;
+            background-color: #4059f5;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .mar::before {
+            content: "";
+            position: absolute;
+            width: 200%;
+            height: 35px;
+            top: -15px;
+            left: -50%;
+            border-radius: 50%;
+            background: radial-gradient(
+                ellipse,
+                #75d7f5 40%,
+                transparent 42%
+            );
+            background-size: 100px 35px;
+            animation: ondas 4s linear infinite;
+        }
+
+        .mar::after {
+            content: "";
+            position: absolute;
+            width: 200%;
+            height: 35px;
+            top: 15px;
+            left: -50%;
+            border-radius: 50%;
+            background: radial-gradient(
+                ellipse,
+                #263ed0 40%,
+                transparent 42%
+            );
+            background-size: 120px 35px;
+            animation: ondas 6s linear infinite reverse;
+        }
+
+        @keyframes ondas {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(100px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="cena">
+
+        <div class="nuvem"></div>
+
+        <div class="barquinho">⛵</div>
+
+        <div class="mar"></div>
+
+    </div>
+
+</body>
+</html>
