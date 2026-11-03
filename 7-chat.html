@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+
+    <style>
+    
+        body {
+        font-family: Arial, sans-serif;
+        background-color: white;
+        }
+
+        .chat {
+        width: 300px;
+        height: 500px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 10px;
+        margin: 30px auto;
+        overflow-y: auto;
+        }
+
+        .mensagem {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 15px;
+        margin-bottom: 10px;
+        min-height: 35px;
+        position: relative;
+        overflow: auto;
+        }
+
+        .recebida {
+        background-color: white;
+        text-align: left;
+        }
+
+        .enviada {
+        background-color: #c9f7c9;
+        text-align: right;
+        }
+
+        .avatar {
+        float: left;
+        font-size: 25px;
+        margin-right: 10px;
+        }
+
+        .enviada .avatar {
+        float: right;
+        margin-right: 0;
+        margin-left: 10px;
+        }
+
+        .horario {
+        position: absolute;
+        bottom: 4px;
+        right: 8px;
+        font-size: 10px;
+        color: gray;
+        }
+
+        .remetente {
+        font-size: 12px;
+        color: gray;
+        margin-bottom: 3px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="chat">
+
+        <div class="remetente">Pedro Silva</div>
+        <div class="mensagem recebida">
+            <span class="avatar">👨🏻</span>
+            Olá, tudo bem?
+            <span class="horario">00:50</span>
+        </div>
+
+        <div class="remetente">Eu</div>
+        <div class="mensagem enviada">
+            <span class="avatar">👩🏻</span>
+            Estou bem sim, e você?
+            <span class="horario">00:55</span>
+        </div>
+
+        <div class="remetente">Pedro Silva</div>
+        <div class="mensagem recebida">
+            <span class="avatar">👨🏻</span>
+            Vamos sair hoje? sabe conversar e Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            <span class="horario">01:01</span>
+        </div>
+
+        <div class="remetente">Eu</div>
+        <div class="mensagem enviada">
+            <span class="avatar">👩🏻</span>
+            Criatura........
+            <span class="horario">00:55</span>
+        </div>
+
+        <div class="mensagem">
+        <span>Digite sua mensagem...</span>
+        </div>
+
+    </div>
+
+</body>
+</html>
