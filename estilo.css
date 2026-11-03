@@ -1,0 +1,44 @@
+h1 {
+    color: pink;
+}
+
+#atividade1 {
+    color: rgb(130, 2, 2);
+    font-family: -apple-system;
+}
+
+#atividade1 span {
+    color: rgb(138, 4, 60);
+    font-family: serif;
+}
+
+#paragrafo1 {
+    color: rgb(0, 200, 255);
+    font-family: "Times New Roman";
+}
+
+#paragrafo2 {
+    color: rgb(177, 7, 224);
+    font-family: georgia;
+}
+
+#paragrafo3 {
+    color: rgb(255, 21, 95);
+    font-family: monospace;
+}
+
+#paragrafo1 span {
+    color: rgb(0, 102, 120);
+    font-family: "Times New Roman";
+}
+
+#paragrafo2 span {
+    color: rgb(102, 4, 138);
+    font-family: georgia;
+}
+
+#paragrafo3 span {
+    color: rgb(130, 7, 67);
+    font-family: monospace;
+}
+
