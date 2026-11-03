@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bandeiras com CSS</title>
+
+    <style>
+        .bandeira {
+            width: 300px;
+            height: 180px;
+            position: relative;
+            overflow: hidden;
+            margin: 15px;
+            border: 1px solid #ccc;
+        }
+
+        #japao.bandeira {
+            background-color: white;
+        }
+
+        #japao.bandeira > div.circulo {
+            background-color: red;
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            position: absolute;
+            top: 45px;
+            left: 105px;
+        }
+
+        #alemanha.bandeira {
+            background: linear-gradient(
+                to bottom,
+                black 0%,
+                black 33.33%,
+                red 33.33%,
+                red 66.66%,
+                yellow 66.66%,
+                yellow 100%
+            );
+        }
+
+        #holanda.bandeira {
+            background: linear-gradient(
+                to bottom,
+                red 0%,
+                red 33.33%,
+                white 33.33%,
+                white 66.66%,
+                blue 66.66%,
+                blue 100%
+            );
+        }
+
+        #italia.bandeira {
+            background: linear-gradient(
+                to right,
+                green 0%,
+                green 33.33%,
+                white 33.33%,
+                white 66.66%,
+                red 66.66%,
+                red 100%
+            );
+        }
+
+        #brasil.bandeira {
+            background-color: green;
+        }
+
+        #brasil.bandeira > div.losango {
+         width: 150px;
+        height: 120px;
+        background-color: yellow;
+        position: absolute;
+        top: 30px;
+        left: 75px;
+        clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+}
+
+        #brasil.bandeira > div.circulo {
+            width: 75px;
+            height: 75px;
+            background-color: blue;
+            border-radius: 50%;
+            position: absolute;
+            top: 52px;
+            left: 112px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Bandeiras dos Países</h1>
+
+    <nav>
+        <a href="#japao">Bandeira Japão</a> |
+        <a href="#alemanha">Bandeira Alemanha</a> |
+        <a href="#holanda">Bandeira Holanda</a> |
+        <a href="#italia">Bandeira Itália</a> |
+        <a href="#brasil">Bandeira Brasil</a>
+    </nav>
+
+    <h2>Japão</h2>
+    <div class="bandeira" id="japao">
+        <div class="circulo"></div>
+    </div>
+
+    <h2>Alemanha</h2>
+    <div class="bandeira" id="alemanha"></div>
+
+    <h2>Holanda</h2>
+    <div class="bandeira" id="holanda"></div>
+
+    <h2>Itália</h2>
+    <div class="bandeira" id="italia"></div>
+
+    <h2>Brasil</h2>
+    <div class="bandeira" id="brasil">
+        <div class="losango"></div>
+        <div class="circulo"></div>
+    </div>
+
+</body>
+</html>
